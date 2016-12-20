@@ -1,19 +1,22 @@
 //clique bouton affiche
 let tab = [];
-const es6 = () => {
-	const hello = "Bonjour";
-	const inputNoVal = "Père Noël";
-	const inputVal = document.getElementById('nom').value;
 
+const es6 = () => {
+	const inputVal = document.getElementById('nom').value;
+	//mettre en maj la première lettre des données de l'input
+	const majName = inputVal.charAt(0).toUpperCase();
+	const name = majName + inputVal.slice(1);
 	//Si champ vide "Bonjour Père Noël !"
 	if (inputVal === ""){
-		document.getElementById('message').innerHTML = hello + " " + inputNoVal;	
-	} 
+		document.getElementById('message').innerHTML = "Bonjour Père Noël !";	
+	}
 	// Si input rempli "Bonjour {nom saisi} !"
 	else {
-		document.getElementById('message').innerHTML = hello + " " + inputVal;
-		document.getElementById('list').appendChild(document.createElement('li')).innerHTML = inputVal;
-		tab.push(inputVal);
+		document.getElementById('message').innerHTML = `Bonjour ${inputVal}`;
+		//les données de l'input modifiées s'affichent en liste
+		document.getElementById('list').appendChild(document.createElement('li')).innerHTML = name;
+		//les données de l'input modifiées s'ajoutent au tableau
+		tab.push(name);
 		console.log(tab);
 	}		
 }
