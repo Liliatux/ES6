@@ -6,10 +6,18 @@
 </head>
 <body>
 	<h1 id="message"></h1>
-	<label for="nom">Saisissez votre nom</label>
-	<input type="text" name="nom" id="nom" placeholder="Lilia" value="">
-	<button onclick="es6()">Hello</button>
-	<ol id="list"></ol>
+	<div class="add">
+		<label for="nom">Ajouter un nom</label>
+		<input type="text" name="nom" id="nom" placeholder="Lilia" value="">
+		<button id="addName">+</button>
+	</div>
+	<div class="search">
+		<input type="search" placeholder="Nom" id="search" value="">
+		<button id="searchName">Rechercher</button>
+	</div>
+	<span id="result"></span>
+	<ul id="list"></ul>
+
 	<script src="app.js"></script>
 </body>
 </html>
